@@ -13,7 +13,7 @@ public class Main {
         System.out.println(checkForPalindrome("Was it a car or a cat I saw ?"));
     }
     public static boolean checkForPalindrome(String string) {
-        String text = string.replaceAll("[?.,!_\\- ]","").toLowerCase(Locale.ROOT);
+        String text = string.toLowerCase(Locale.ROOT).replaceAll("[^a-z0-9]", "");
         StringBuilder strStringBuilder = new StringBuilder(text).reverse();
         return text.equals(strStringBuilder.toString());
     //Stack yapisi kullanarak yapabilirdim.
